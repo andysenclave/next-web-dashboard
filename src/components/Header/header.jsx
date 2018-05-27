@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import './header.css';
@@ -19,7 +20,19 @@ class Header extends Component {
           <Typography variant="title" color="inherit" className="title">
             Digital Transformation
           </Typography>
-          <UserInfo />
+          <span className="content-right">
+            <span className="links">
+              <Icon className="notification" color="disabled">
+                notification_important
+              </Icon>
+            </span>
+            <span className="links">
+              <Icon className="agenda" color="disabled">
+                date_range
+              </Icon>
+            </span>
+            <UserInfo />
+          </span>
         </Toolbar>
       </AppBar>
     );

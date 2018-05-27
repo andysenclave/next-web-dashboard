@@ -7,6 +7,20 @@
   float: right;
   margin-left: auto;
 }
+#app .bar .content-right > * {
+  float: left;
+}
+#app .bar .links {
+  padding: 0 10px;
+  border-left: 2px solid #f7f7fe;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+}
 #app .header .title {
   float: left;
   margin-left: 10px;
