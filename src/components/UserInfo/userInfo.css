@@ -1,0 +1,19 @@
+span.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 10px;
+  border-left: 2px solid #f7f7fe;
+}
+#app .user-info > * {
+  margin: 0px 5px;
+}
+
+.user-info .username {
+  color: #9f9f9f;
+  font-size: 0.95em;
+  text-shadow: 0px 1px 1px;
+  padding: 0 5px;
+}
