@@ -1,8 +1,13 @@
 #app .bar > .menu-bar {
   float: left;
+  margin-top: 0px;
   margin-left: 0px;
   display: flex;
   align-items: center;
+  flex: 2;
+  height: 64px;
+  margin-bottom: 0;
+  overflow: hidden;
 }
 
 #app .menu-bar .title {
@@ -10,6 +15,13 @@
   margin-left: 10px;
   font-weight: lighter;
   color: #909090;
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -webkit-transition: 0.2s all ease;
 } 
 #app .menu-bar .drawer {
   float: left;
@@ -21,5 +33,39 @@
 }
 #app .menu-bar .menu-icon {
   height: 25px;
-  width: 25px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+#app .menu-bar .menu {
+  display: flex;
+  padding-left: 10px;
+  position: relative;
+  top: 0px;
+  opacity: 0;
+  transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -webkit-transition: 0.2s all ease;
+}
+
+#app .menu .nav-item {
+  display: flex;
+  width: 150px;
+  cursor: pointer;
+}
+
+#app .menu .nav-title {
+  color: #b7b7bd;
+}
+.fadeAwayTop {
+  top: -50px !important;
+  opacity: 0 !important;
+}
+.fadeInBottom {
+  top: -55px !important;
+  opacity: 1 !important;
 }

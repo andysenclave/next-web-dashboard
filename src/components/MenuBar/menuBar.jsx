@@ -1,38 +1,65 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 import MenuIcon from '../MenuIcon/menuIcon';
+import MenuItems from './menuItems';
 import './menuBar.css';
 
 class MenuBar extends Component {
   constructor(){
     super();
     this.state = {
-      menuIconClass: ''
+      titleClass: 'title',
+      menuIconClass: '',
+      menuItemsClass: '',
+      menuItems: [{
+        title: `What's new?`,
+        link: `/whatsnew`,
+        icon: 'view_module'
+      },{
+        title: `Agenda`,
+        link: `/agenda`,
+        icon: 'date_range'
+      },{
+        title: `Nearby`,
+        link: `/nearby`,
+        icon: 'location_on'
+      }]
     };
     this.transformMenu = this.transformMenu.bind(this);
   }
 
   transformMenu() {
-    const { menuIconClass } = this.state;
+    const { menuIconClass, menuItemsClass, titleClass } = this.state;
     this.setState({
-      menuIconClass: menuIconClass === 'open' ? '' : 'open'
+      titleClass: titleClass === 'title' ? 'title fadeAwayTop' : 'title',
+      menuIconClass: menuIconClass === 'open' ? '' : 'open',
+      menuItemsClass: menuItemsClass === '' ? 'fadeInBottom' : ''
     });
   }
 
   render() {
-    const { menuIconClass } = this.state;
+    const { titleClass, menuIconClass, menuItemsClass, menuItems } = this.state;
 
     return (
-      <section className="menu-bar">
+      <Grid container spacing={24} className="menu-bar">
+        <Grid item sm={1} md={1}>
           <Button variant="fab" color="primary" aria-label="add" className="drawer" onClick = {() => { this.transformMenu() }}>
             <MenuIcon className={`menu-icon ${menuIconClass}`} handleClick = {() => { this.transformMenu() }}/>
           </Button>
-          <Typography variant="title" color="inherit" className="title">
+        </Grid>
+        <Grid item sm={11} md={11}>
+          <Typography variant="title" color="inherit" className={titleClass}>
             Digital Transformation
           </Typography>
-      </section>
+        </Grid>
+        <Grid item sm={1} md={1}></Grid>
+        <Grid item sm={11} md={11}>
+          <MenuItems items={menuItems} className={menuItemsClass}/>
+        </Grid>
+      </Grid>
     );
   }
 }
