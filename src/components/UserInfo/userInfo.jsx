@@ -11,7 +11,7 @@ const UserInfo = () => {
         Alex Dunphy
       </Typography>
       <Avatar
-        alt="Adelle Charles"
+        alt="Alex Dunphy"
         src="https://material-ui.com/static/images/uxceo-128.jpg"
         className="avatar"
       />

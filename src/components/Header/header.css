@@ -7,20 +7,17 @@
   float: right;
   margin-left: auto;
 }
-#app .header .title {
+#app .bar .content-right > * {
   float: left;
-  margin-left: 10px;
-  font-weight: lighter;
-} 
-#app .header .drawer {
-  float: left;
-  margin-left: 0px;
-  background-color: #6796f7c9;
-  box-shadow: 0 12px 20px -10px rgba(43, 155, 208, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(66, 39, 176, 0.2);
-  height: 45px;
-  width: 45px;
 }
-#app .header .avatar {
-  width: 45px;
+#app .bar .links {
+  padding: 0 10px;
+  border-left: 2px solid #f7f7fe;
   height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
 }

@@ -17,3 +17,8 @@ span.user-info {
   text-shadow: 0px 1px 1px;
   padding: 0 5px;
 }
+
+#app .user-info .avatar {
+  width: 45px;
+  height: 45px;
+}
