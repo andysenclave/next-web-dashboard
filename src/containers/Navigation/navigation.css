@@ -1,0 +1,36 @@
+#app .navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app .navigation-container .left-wrapper{
+  width: 30%;
+  height: 100%;
+  background: blueviolet;
+}
+
+#app .navigation-container .right-wrapper{
+  width: 70%;
+  height: 100%;
+  background: cadetblue;  
+}
+
+@media screen and (max-width: 1023px) {
+  #app .navigation-container {
+    flex-direction: column-reverse;
+  }
+  #app .navigation-container .left-wrapper {
+    width: 100%;
+    height: 40%;
+  }
+  #app .navigation-container .right-wrapper {
+    width: 100%;
+    height: 60%;
+  }
+
+}
