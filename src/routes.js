@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Dashboard from './containers/Dashboard';
+import Dashboard from './containers/Dashboard/dashboard';
 
 class App extends Component {
   render() {
