@@ -6,7 +6,7 @@ import DateOperations from './helper';
 import './calendar.css';
 
 const MonthlyCalendar = () => {
-  const { short_days } = DateConfig;
+  const { short_dayNames } = DateConfig;
   const today = new Date();
   
   const emptyDays = Array(DateOperations.getStartDayOfMonth(today)).join().split(',');
@@ -16,7 +16,7 @@ const MonthlyCalendar = () => {
     <Grid container className="month-calendar">
       <Grid container></Grid>
       <Grid className="row" container spacing={0}>
-        {short_days.map((item, index) => <Grid item key={index}>{item}</Grid>)}
+        {short_dayNames.map((item, index) => <Grid item key={index}>{item}</Grid>)}
       </Grid>
       <Grid className="row" container spacing={0}>
         {emptyDays.map((item, index) => <Grid item key={index}></Grid>)}      
