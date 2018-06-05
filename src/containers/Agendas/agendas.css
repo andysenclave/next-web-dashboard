@@ -1,0 +1,21 @@
+#app .agendas-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app .agendas-container .daily-calendar-wrapper{
+  width: 30%;
+  height: 100%;
+  background: blueviolet;
+}
+
+#app .agendas-container .monthly-calendar-wrapper{
+  width: 70%;
+  height: 100%;
+  background: cadetblue;  
+}

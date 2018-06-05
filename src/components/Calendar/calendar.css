@@ -1,0 +1,7 @@
+#app .month-calendar .row {
+  align-items: center;
+}
+#app .month-calendar .row > * {
+  width: 14.28%;
+  text-align: center;
+}
