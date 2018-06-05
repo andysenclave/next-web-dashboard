@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Grid from '@material-ui/core/Grid';
 
 import MonthlyCalendar from '../../components/Calendar/monthly';
 import './agendas.css';
@@ -6,12 +7,12 @@ import './agendas.css';
 class Agendas extends Component {
   render() {
     return (
-      <main className="agendas-container">
-        <aside className="daily-calendar-wrapper"></aside>
-        <section className="monthly-calendar-wrapper">
+      <Grid container className="agendas-container">
+        <Grid item className="daily-calendar-wrapper"></Grid>
+        <Grid item className="monthly-calendar-wrapper">
           <MonthlyCalendar />
-        </section>
-      </main>
+        </Grid>
+      </Grid>
     );
   }
 };
